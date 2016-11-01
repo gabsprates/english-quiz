@@ -59,3 +59,8 @@ Session.vim
 *~
 # auto-generated tag files
 tags
+
+
+# dev
+_work
+env.ini
