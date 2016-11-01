@@ -1,0 +1,14 @@
+{
+  "name": "quiz",
+  "version": "1.0.0",
+  "description": "Projeto com finalidade acadêmica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabriel Prates <me@gabsprates.com> (http://gabsprates.com)",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
