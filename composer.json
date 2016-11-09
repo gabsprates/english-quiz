@@ -1,0 +1,15 @@
+{
+    "name": "gabriel/english-quiz",
+    "authors": [
+        {
+            "name": "Gabriel Prates",
+            "email": "me@gabsprates.com"
+        }
+    ],
+    "autoload": {
+      "classmap": ["Lib"]
+    },
+    "require": {
+        "altorouter/altorouter": "1.1.0"
+    }
+}

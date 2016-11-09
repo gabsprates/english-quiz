@@ -9,7 +9,13 @@
   "author": "Gabriel Prates <me@gabsprates.com> (http://gabsprates.com)",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "jquery": "^3.1.1"
+    "angular": "^1.5.8",
+    "bulma": "^0.2.3"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0"
   }
 }
