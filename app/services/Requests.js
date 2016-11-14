@@ -1,11 +1,9 @@
 const axios = require('axios');
 
-var QuizQuestions = {
+module.exports = {
 
-  get: function () {
+  getQuestions: function () {
     return axios.get("./webservice/get/questions");
   }
 
-};
-
-module.exports = QuizQuestions;
+}

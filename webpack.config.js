@@ -1,9 +1,9 @@
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
-  entry: "./app/App.js",
+  entry: "./app/Quiz.js",
   output: {
-    filename: "assets/js/App.js"
+    filename: "assets/js/Quiz.js"
   },
   module: {
     loaders: [
