@@ -1,7 +1,10 @@
 const React     = require('react');
-const reactDOM  = require('react-dom');
+const ReactDOM  = require('react-dom');
+var Question    = require('./components/Question');
 
-reactDOM.render(
-  <h1 className="title is-3">English quiz</h1>,
-  document.getElementById('app')
+ReactDOM.render(
+  <div className="container">
+    <Question />
+  </div>,
+  document.getElementById('questions')
 );
