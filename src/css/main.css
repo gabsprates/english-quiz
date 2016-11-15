@@ -6,3 +6,40 @@ body, html {
   width: 100%;
   height: 100%;
 }
+
+#quiz-content > h1 {
+}
+
+.btns {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.question {
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+  font-size: 20px;
+  border-radius: 19941101px;
+  flex-wrap: wrap;
+  margin: 20px;
+  transition: 0.2s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+.question.is-info {
+  /*border-top-width: 3px;
+  border-right-width: 3px;
+  border-left-width: 3px;
+  border-bottom-width: 3px;
+  border-color: #0f4191;
+  border-style: solid;*/
+}
+.question.is-off {
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border: 0;
+}
+.question span {
+  display: block;
+  width: 100%;
+}
