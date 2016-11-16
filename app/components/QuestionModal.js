@@ -3,14 +3,21 @@ const Requests = require('../services/Requests.js');
 
 var QuestionModal = React.createClass({
 
+  thisAnswer: function (e) {
+    e.preventDefault();
+    console.log(this.props);
+    return false;
+  },
+
   render: function () {
+    var self = this;
     var cssClass  = this.props.show === false ? "modal" : "modal is-active";
     var alternatives = this.props.infoQuestion.respostas.map(function (resp, rKey) {
-      console.log(resp);
       return (
-        <div className="control" key={rKey}>
+        <div className="control alternative" key={rKey}>
           <label className="label">
-            <input value={rKey} name='answer' type="radio" />
+            <input value={rKey} name="answer" type="radio" />
+            <span className="fa"></span>
             {resp}
           </label>
         </div>
@@ -26,17 +33,22 @@ var QuestionModal = React.createClass({
               <p className="modal-card-title">
                 Questão {this.props.infoQuestion.questao}
               </p>
-              <button className="delete" onClick={this.props.closeModal}></button>
+              <button
+                onClick={this.props.closeModal}
+                className="delete"
+                type="button">
+              </button>
             </header>
             <section className="modal-card-body">
-              <h3 className="title is-3">
+              <h5 className="title is-5">
                 {this.props.infoQuestion.pergunta}
-              </h3>
+              </h5>
               {alternatives}
             </section>
             <footer className="modal-card-foot">
-              <a className="button is-primary">Save changes</a>
-              <a className="button">Cancel</a>
+              <button type="submit" className="button is-fullwidth is-primary">
+                Responder
+              </button>
             </footer>
           </form>
         </div>

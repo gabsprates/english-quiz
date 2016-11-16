@@ -47,6 +47,7 @@ var QuizTotal = React.createClass({
         <Question listQuestions={this.state.questions} showQuestion={this.updateQuestion} />
         <QuestionModal
           infoQuestion={this.state.thisQuestion}
+          whenResponse={this.getQuestions}
           closeModal={this.closeModal}
           show={this.state.showModal}
           />
