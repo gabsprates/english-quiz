@@ -23,14 +23,7 @@ body, html {
   transition: 0.2s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
   box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
 }
-.question.is-info {
-  /*border-top-width: 3px;
-  border-right-width: 3px;
-  border-left-width: 3px;
-  border-bottom-width: 3px;
-  border-color: #0f4191;
-  border-style: solid;*/
-}
+
 .question.is-off {
   background: rgba(0, 0, 0, 0.3);
   color: #fff;
@@ -65,4 +58,10 @@ body, html {
 }
 .alternative input:checked + .fa::before {
   content: '\f111'
+}
+
+.modal-question-text {
+  background-color: transparent;
+  font-size: 24px;
+  margin-bottom: 20px;
 }

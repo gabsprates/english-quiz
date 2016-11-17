@@ -5,14 +5,23 @@ var QuestionModal = React.createClass({
 
   thisAnswer: function (e) {
     e.preventDefault();
-    console.log(this.props);
+    var answerUser    = e.target.answer.value || null;
+    var answerCorrect = +this.props.infoQuestion.correta;
+    answerUser = answerUser === null ? null : +answerUser;
+
+    if (answerUser === answerCorrect) {
+      alert("correct");
+    } else {
+      alert("wrong");
+    }
+    // this.props.whenResponse();
     return false;
   },
 
   render: function () {
     var self = this;
-    var cssClass  = this.props.show === false ? "modal" : "modal is-active";
-    var alternatives = this.props.infoQuestion.respostas.map(function (resp, rKey) {
+    var infoThisQuestion = this.props.infoQuestion;
+    var alternatives = infoThisQuestion.respostas.map(function (resp, rKey) {
       return (
         <div className="control alternative" key={rKey}>
           <label className="label">
@@ -25,13 +34,13 @@ var QuestionModal = React.createClass({
     });
 
     return (
-      <div className={cssClass}>
+      <div className="modal is-active">
         <div className="modal-background"></div>
         <div className="modal-card">
-          <form onSubmit={this.thisAnswer}>
+          <form onSubmit={this.thisAnswer} name={"form-question-" + infoThisQuestion.questao}>
             <header className="modal-card-head">
               <p className="modal-card-title">
-                Questão {this.props.infoQuestion.questao}
+                Questão {infoThisQuestion.questao}
               </p>
               <button
                 onClick={this.props.closeModal}
@@ -40,14 +49,20 @@ var QuestionModal = React.createClass({
               </button>
             </header>
             <section className="modal-card-body">
-              <h5 className="title is-5">
-                {this.props.infoQuestion.pergunta}
-              </h5>
+              <div className="modal-question-text">
+                {infoThisQuestion.pergunta}
+              </div>
               {alternatives}
             </section>
             <footer className="modal-card-foot">
               <button type="submit" className="button is-fullwidth is-primary">
                 Responder
+              </button>
+              <button
+                className="button is-fullwidth is-danger"
+                onClick={this.props.closeModal}
+                type="button">
+                Desistir
               </button>
             </footer>
           </form>
