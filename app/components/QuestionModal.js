@@ -1,35 +1,54 @@
-const React = require('react');
-const Requests = require('../services/Requests.js');
+const React       = require('react');
+const Alternative = require('./Alternative');
+const ButtonsBox  = require('./ButtonsBox');
 
 var QuestionModal = React.createClass({
+
+  getInitialState: function () {
+    return {
+      isAnswering: {
+        state: false,
+        answer: false
+      }
+    };
+  },
 
   thisAnswer: function (e) {
     e.preventDefault();
     var answerUser    = e.target.answer.value || null;
-    var answerCorrect = +this.props.infoQuestion.correta;
+    var answerCorrect = +this.props.infoQuestion.resposta;
+    var rightAnswer = false;
+
+    if (answerUser === null) {
+      return false;
+    }
     answerUser = answerUser === null ? null : +answerUser;
 
     if (answerUser === answerCorrect) {
-      alert("correct");
+      this.setState({ isAnswering: { state: true, answer: true } });
+      rightAnswer = true;
     } else {
-      alert("wrong");
+      this.setState({ isAnswering: { state: true, answer: false } });
     }
-    // this.props.whenResponse();
+    this.props.whenResponse(
+      this.props.infoQuestion.questao,
+      rightAnswer
+    );
     return false;
   },
 
   render: function () {
     var self = this;
     var infoThisQuestion = this.props.infoQuestion;
-    var alternatives = infoThisQuestion.respostas.map(function (resp, rKey) {
+    var alternatives = infoThisQuestion.alternativas.map(function (resp, rKey) {
       return (
-        <div className="control alternative" key={rKey}>
-          <label className="label">
-            <input value={rKey} name="answer" type="radio" />
-            <span className="fa"></span>
-            {resp}
-          </label>
-        </div>
+        <Alternative
+          rightAnswer={infoThisQuestion.resposta}
+          answered={!!infoThisQuestion.respondida}
+          value={rKey}
+          text={resp}
+          key={rKey}
+          />
       );
     });
 
@@ -48,23 +67,22 @@ var QuestionModal = React.createClass({
                 type="button">
               </button>
             </header>
+
             <section className="modal-card-body">
               <div className="modal-question-text">
                 {infoThisQuestion.pergunta}
               </div>
               {alternatives}
             </section>
+
             <footer className="modal-card-foot">
-              <button type="submit" className="button is-fullwidth is-primary">
-                Responder
-              </button>
-              <button
-                className="button is-fullwidth is-danger"
-                onClick={this.props.closeModal}
-                type="button">
-                Desistir
-              </button>
+              <ButtonsBox
+                isAnswered={infoThisQuestion.respondida}
+                isAnswering={this.state.isAnswering}
+                closeModal={this.props.closeModal}
+                />
             </footer>
+
           </form>
         </div>
       </div>

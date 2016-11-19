@@ -1,7 +1,7 @@
-const React     = require('react');
-const ReactDOM  = require('react-dom');
-const Requests  = require('../services/Requests.js');
-var Question    = require('./Question');
+const React       = require('react');
+const ReactDOM    = require('react-dom');
+const Requests    = require('../services/Requests.js');
+var Question      = require('./Question');
 var QuestionModal = require('./QuestionModal');
 
 var QuizTotal = React.createClass({
@@ -27,6 +27,13 @@ var QuizTotal = React.createClass({
     }.bind(this));
   },
 
+  answerQuestion: function (question, questionResponse) {
+    Requests.setAnswered(question).then(function (response) {
+      this.listQuestions(response.data.perguntas);
+    }.bind(this));
+    console.log(questionResponse);
+  },
+
   listQuestions: function (r) {
     this.setState({ questions: r });
   },
@@ -49,7 +56,7 @@ var QuizTotal = React.createClass({
           !!this.state.showModal &&
           <QuestionModal
             infoQuestion={this.state.thisQuestion}
-            whenResponse={this.getQuestions}
+            whenResponse={this.answerQuestion}
             closeModal={this.closeModal}
             />
         }

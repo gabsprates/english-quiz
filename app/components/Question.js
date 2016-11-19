@@ -19,7 +19,13 @@ var Question = React.createClass({
         var btnClass = " button question ";
         btnClass += question.respondida === 0 ? ' is-info ' : 'is-off';
         return (
-          <button key={qKey} value={qKey} className={btnClass} onClick={self.showQuestion}>
+          <button
+            onClick={self.showQuestion}
+            className={btnClass}
+            type="button"
+            value={qKey}
+            key={qKey}
+            >
             {qKey}
           </button>
         );
