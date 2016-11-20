@@ -6,6 +6,28 @@ var QuestionModal = require('./QuestionModal');
 
 var QuizTotal = React.createClass({
 
+  gameSound:      document.getElementById('sound_game'),
+  questionSound:  document.getElementById('sound_question'),
+  wrongAnswer1:   document.getElementById('sound_wrong'),
+  wrongAnswer2:   document.getElementById('sound_wrong2'),
+  rightAnswer1:   document.getElementById('sound_correct'),
+  rightAnswer2:   document.getElementById('sound_correct2'),
+
+  startGameSong: function () {
+    this.gameSound.currentTime = 0;
+    this.gameSound.play();
+  },
+
+  startQuestionSong: function () {
+    this.questionSound.currentTime = 0;
+    this.questionSound.play();
+  },
+
+  stopSongs: function () {
+    this.gameSound.pause();
+    this.questionSound.pause();
+  },
+
   getInitialState: function() {
     this.getQuestions();
 
@@ -28,10 +50,20 @@ var QuizTotal = React.createClass({
   },
 
   answerQuestion: function (question, questionResponse) {
+    var whatSound = Math.ceil(Math.random() * 2);
+    var sound     = "";
     Requests.setAnswered(question).then(function (response) {
       this.listQuestions(response.data.perguntas);
     }.bind(this));
-    console.log(questionResponse);
+
+    this.stopSongs();
+
+    if (questionResponse) {
+      sound = "rightAnswer" + whatSound;
+    } else {
+      sound = "wrongAnswer" + whatSound;
+    }
+    this[sound].play();
   },
 
   listQuestions: function (r) {
@@ -40,10 +72,14 @@ var QuizTotal = React.createClass({
 
   updateQuestion: function (r) {
     this.setState({ thisQuestion: r, showModal: true });
+    this.stopSongs();
+    this.startQuestionSong();
   },
 
   closeModal: function () {
     this.setState({ showModal: false });
+    this.stopSongs();
+    this.startGameSong();
   },
 
   render: function () {

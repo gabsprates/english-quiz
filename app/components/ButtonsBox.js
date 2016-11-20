@@ -6,22 +6,29 @@ var ButtonsBox = React.createClass({
 
     if (!!this.props.isAnswered) {
       return (
-        <button type="button" className="button is-fullwidth is-warning">
+        <button
+          className="button is-fullwidth is-warning"
+          onClick={this.props.closeModal}
+          type="button"
+          >
           Pergunta já respondida
         </button>
       );
     } else {
 
-      var cssClass = "";
-      var text = "";
+      var text      = "";
+      var cssClass  = "";
+      var classIcon = "fa";
 
       if (!!this.props.isAnswering.state) {
         if (!!this.props.isAnswering.answer) {
-          cssClass = "button is-large is-fullwidth is-success";
-          text = "BOA!!! Acertou!";
+          classIcon += " fa-smile-o";
+          cssClass  = "button is-large is-fullwidth is-success";
+          text      = "YEEEEES!!!";
         } else {
-          cssClass = "button is-large is-fullwidth is-danger";
-          text = "ERROOOOOOOOOOOOU!!!";
+          classIcon += " fa-frown-o";
+          cssClass  = "button is-large is-fullwidth is-danger";
+          text      = "NOOOOOOOOOOOO!!!";
         }
 
         return (
@@ -31,6 +38,9 @@ var ButtonsBox = React.createClass({
             type="button"
             >
             {text}
+            <span className="icon">
+              <i className={classIcon}></i>
+            </span>
           </button>
         );
 
