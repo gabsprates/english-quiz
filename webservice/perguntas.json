@@ -1,0 +1,592 @@
+{
+    "perguntas": [
+        {
+            "questao": 0,
+            "pergunta": "Qual n\u00e3o \u00e9 uma origem do Ingl\u00eas?",
+            "alternativas": [
+                "Anglo Sax\u00f4nica",
+                "Latina",
+                "Francesa",
+                "Africana"
+            ],
+            "resposta": 3,
+            "respondida": 1
+        },
+        {
+            "questao": 1,
+            "pergunta": "Quantas horas de estudo s\u00e3o necess\u00e1rias para falar Ingl\u00eas fluente?",
+            "alternativas": [
+                "3600 horas",
+                "900 horas",
+                "1200 horas",
+                "600 horas"
+            ],
+            "resposta": 1,
+            "respondida": 1
+        },
+        {
+            "questao": 2,
+            "pergunta": "Qual a fun\u00e7\u00e3o do auxiliar \"do\" antes da frase?",
+            "alternativas": [
+                "Indicar uma afirma\u00e7\u00e3o.",
+                "Dar uma entona\u00e7\u00e3o diferente.",
+                "Fazer um xingamento",
+                "Indicar uma pergunta."
+            ],
+            "resposta": 3,
+            "respondida": 1
+        },
+        {
+            "questao": 3,
+            "pergunta": "O que \u00e9 um cognato?",
+            "alternativas": [
+                "Palavras em ingl\u00eas que t\u00eam a sua ortografia muito parecida ao idioma portugu\u00eas cujo o significado continua sendo o mesmo, tanto em ingl\u00eas e no portugu\u00eas.",
+                "Palavras em ingl\u00eas que t\u00eam a sua ortografia diferente ao idioma portugu\u00eas mas o significado \u00e9 o mesmo do Ingl\u00eas.",
+                "Palavras em ingl\u00eas que n\u00e3o tem semelhan\u00e7a alguma com o idioma portugu\u00eas.",
+                "Palavras em ingl\u00eas com mesma quantidade de letras de uma palavra em portugu\u00eas."
+            ],
+            "resposta": 0,
+            "respondida": 1
+        },
+        {
+            "questao": 4,
+            "pergunta": "Qual palavra n\u00e3o \u00e9 um cognato id\u00eantico?",
+            "alternativas": [
+                "Pizza",
+                "Chocolate",
+                "Banana",
+                "V\u00edrus"
+            ],
+            "resposta": 0,
+            "respondida": 1
+        },
+        {
+            "questao": 5,
+            "pergunta": "Qual palavra n\u00e3o \u00e9 um cognato semelhante?",
+            "alternativas": [
+                "Telephone",
+                "Technology",
+                "Computer",
+                "Ten"
+            ],
+            "resposta": 3,
+            "respondida": 1
+        },
+        {
+            "questao": 6,
+            "pergunta": "Sabemos que na l\u00edngua inglesa encontramos palavras semelhantes a voc\u00e1bulos da l\u00edngua portuguesa, pois apresentam proximidade na grafia e no sentido. Analisando a ora\u00e7\u00e3o \"Ken and his family live close to my house.\", \u00e9 poss\u00edvel afirmar que a palavra cognata est\u00e1 corretamente indicada na alternativa:",
+            "alternativas": [
+                "House",
+                "Live",
+                "Family",
+                "His"
+            ],
+            "resposta": 2,
+            "respondida": 0
+        },
+        {
+            "questao": 7,
+            "pergunta": "O que \u00e9 estrangeirismo?",
+            "alternativas": [
+                "A capacidade de uma pessoa falar dois ou mais idiomas diferentes.",
+                "\u00c9 a a\u00e7\u00e3o de traduzir palavras para um ou mais idiomas.",
+                "\u00c9 a coloca\u00e7\u00e3o de palavras, express\u00f5es idiom\u00e1ticas e constru\u00e7\u00f5es de frases em um determinado idioma que n\u00e3o \u00e9 originalmente dele.",
+                "Utiliza\u00e7\u00e3o de g\u00edrias de outras l\u00ednguas no idioma nativo do pa\u00eds ou regi\u00e3o."
+            ],
+            "resposta": 2,
+            "respondida": 0
+        },
+        {
+            "questao": 8,
+            "pergunta": "O que \u00e9 aportuguesar uma palavra?",
+            "alternativas": [
+                "O ato de traduzir a palavra para portugu\u00eas.",
+                "\u00c9 trazer uma palavra inglesa para o portugu\u00eas, com uma adapta\u00e7\u00e3o para a l\u00edngua.",
+                "Dar mais de um significado para uma palavra em ingl\u00eas.",
+                "Usar palavras em ingl\u00eas em frases em portugu\u00eas."
+            ],
+            "resposta": 1,
+            "respondida": 0
+        },
+        {
+            "questao": 9,
+            "pergunta": "Qual a defini\u00e7\u00e3o da T\u00e9cnica de Skimming?",
+            "alternativas": [
+                "Leitura de forma completa e clara do texto, traduzindo todas as palavras.",
+                "Buscar no texto informa\u00e7\u00f5es necess\u00e1rias, como datas e palavras em negrito.",
+                "\u00c9 uma leitura de forma superficial, linear, com foco nos cognatos e palavras que conhe\u00e7o.",
+                "\u00c9 uma leitura do in\u00edcio do par\u00e1grafo at\u00e9 o primeiro ponto final."
+            ],
+            "resposta": 2,
+            "respondida": 0
+        },
+        {
+            "questao": 10,
+            "pergunta": "Qual a estrutura b\u00e1sica de uma frase em ingl\u00eas?",
+            "alternativas": [
+                "Sujeito, verbo, objeto.",
+                "Verbo, cognato, auxiliar.",
+                "Sujeito, auxiliar, verbo.",
+                "Objeto, verbo, auxiliar."
+            ],
+            "resposta": 0,
+            "respondida": 0
+        },
+        {
+            "questao": 11,
+            "pergunta": "Qual a defini\u00e7\u00e3o da T\u00e9cnica de Scanning?",
+            "alternativas": [
+                "Leitura visando localizar informa\u00e7\u00f5es importantes no texto.",
+                "Leitura de forma completa e clara do texto, traduzindo todas as palavras.",
+                "\u00c9 uma leitura de forma superficial, linear, com foco nos cognatos e palavras que conhe\u00e7o.",
+                "\u00c9 uma leitura do in\u00edcio do par\u00e1grafo at\u00e9 o primeiro ponto final."
+            ],
+            "resposta": 0,
+            "respondida": 0
+        },
+        {
+            "questao": 12,
+            "pergunta": "T\u00f3pico Frasal \u00e9:",
+            "alternativas": [
+                "Leitura de um par\u00e1grafo inteiro.",
+                "Adivinhar tema do texto a partir do t\u00edtulo e do primeiro par\u00e1grafo.",
+                "\u00c9 uma leitura do in\u00edcio do par\u00e1grafo at\u00e9 o primeiro cognato.",
+                "\u00c9 uma leitura do in\u00edcio do par\u00e1grafo at\u00e9 o primeiro ponto final."
+            ],
+            "resposta": 3,
+            "respondida": 1
+        },
+        {
+            "questao": 13,
+            "pergunta": "Grupo Nominal \u00e9:",
+            "alternativas": [
+                "Grupo de palavras com sentidos semelhantes.",
+                "Invers\u00e3o da ordem de duas ou mais palavras ao serem traduzidas.",
+                "Frase com um ou mais verbos.",
+                "Invers\u00e3o da ordem das palavras de uma frase sem alterar o seu sentido."
+            ],
+            "resposta": 1,
+            "respondida": 1
+        },
+        {
+            "questao": 14,
+            "pergunta": "Em que ano a Netflix foi fundada:",
+            "alternativas": [
+                "1977",
+                "1987",
+                "1997",
+                "2007"
+            ],
+            "resposta": 2,
+            "respondida": 0
+        },
+        {
+            "questao": 15,
+            "pergunta": "Sobre o texto da Netflix trabalhado em sala, qual das alternativas \u00e9 verdadeira?",
+            "alternativas": [
+                "A Netflix \u00e9 uma empresa canadense que oferece servi\u00e7os de tv na internet.",
+                "A Netflix \u00e9 uma empresa americana que oferece servi\u00e7os de m\u00fasica e jogos.",
+                "A Netflix \u00e9 uma empresa canadense que oferece servi\u00e7os de m\u00fasicas e jogos na internet.",
+                "A Netflix \u00e9 uma empresa americana que oferece servi\u00e7os de tv na internet."
+            ],
+            "resposta": 3,
+            "respondida": 0
+        },
+        {
+            "questao": 16,
+            "pergunta": "A Netflix fechou contrato com qual grande empresa para poder produzir quatro novas s\u00e9ries de super her\u00f3is da Marvel?",
+            "alternativas": [
+                "Disney",
+                "Dreamworks",
+                "Warner Bros",
+                "Century Fox"
+            ],
+            "resposta": 0,
+            "respondida": 0
+        },
+        {
+            "questao": 17,
+            "pergunta": "Qual a principal ideia da Netflix?",
+            "alternativas": [
+                "Por um custo elevado, o usu\u00e1rio possa ter acesso aos mais variados filmes",
+                "Oferecer servi\u00e7os de filmes e s\u00e9ries por um baixo pre\u00e7o mensal, atrav\u00e9s de dispositivoS que tenhaM acesso \u00e0 internet",
+                "Oferecer gratuitamente aos usu\u00e1rios uma grande cole\u00e7\u00e3o de seriados e filmes",
+                "Produzir filmes a fim de atrair mais usu\u00e1rios para a companhia"
+            ],
+            "resposta": 1,
+            "respondida": 0
+        },
+        {
+            "questao": 18,
+            "pergunta": "Marque a alternativa que corresponde \u00e0 rela\u00e7\u00e3o da sequ\u00eancia correta entre personagens e suas respectivas empresas.\n1- Steve Jobs\n2- Steve Wozniak\n3- Marc Randolph\n4- Babak Parviz",
+            "alternativas": [
+                "Apple, Google Glass, Pixar, Netflix",
+                "Google Glass, Pixar, Netflix, Apple",
+                "Pixar, Netflix, Google Glass, Apple",
+                "Pixar, Apple, Netflix, Google Glass"
+            ],
+            "resposta": 3,
+            "respondida": 0
+        },
+        {
+            "questao": 19,
+            "pergunta": "Sobre o Google Glass:",
+            "alternativas": [
+                "\u00c9 uma ferramenta utilizada para facilitar a vida dos gamers em frente ao computador",
+                "\u00c9 um \u00f3culos que reproduz imagens a partir de um smartphone",
+                "\u00c9 um computador port\u00e1til com um monitor \u00f3ptico montado na cabe\u00e7a",
+                "\u00c9 um computador port\u00e1til utilizado em m\u00e3os para acessar a internet atrav\u00e9s de gestos do usu\u00e1rio"
+            ],
+            "resposta": 2,
+            "respondida": 0
+        },
+        {
+            "questao": 20,
+            "pergunta": "A Google iniciou as vendas do Google Glass em 15 de Abril de 2014 nos Estados Unidos por um valor de:",
+            "alternativas": [
+                "$1500",
+                "$2000",
+                "$2500",
+                "$3000"
+            ],
+            "resposta": 0,
+            "respondida": 1
+        },
+        {
+            "questao": 21,
+            "pergunta": "Em 1986, Steve Jobs comprou um est\u00fadio de computa\u00e7\u00e3o gr\u00e1fica que revolucionaria o modo de fazer filmes de anima\u00e7\u00e3o. Que est\u00fadio era esse?",
+            "alternativas": [
+                "Disney Pictures",
+                "DreamWorks",
+                "BlueSky",
+                "Pixar"
+            ],
+            "resposta": 3,
+            "respondida": 1
+        },
+        {
+            "questao": 22,
+            "pergunta": "Onde nasceu Steve Jobs?",
+            "alternativas": [
+                "Texas",
+                "Calif\u00f3rnia",
+                "Los Angeles",
+                "Nova York"
+            ],
+            "resposta": 1,
+            "respondida": 1
+        },
+        {
+            "questao": 23,
+            "pergunta": "Em 5 de Outubro de 2011, Steve Jobs morreu ap\u00f3s uma luta contra c\u00e2ncer no:",
+            "alternativas": [
+                "c\u00e9rebro",
+                "f\u00edgado",
+                "p\u00e2ncreas",
+                "pulm\u00f5es"
+            ],
+            "resposta": 2,
+            "respondida": 1
+        },
+        {
+            "questao": 24,
+            "pergunta": "A Samsung suspendeu a venda e produ\u00e7\u00e3o do Galaxy Note 7, devido \u00e0:",
+            "alternativas": [
+                "Problemas em aplicativos",
+                "Problemas de superaquecimento",
+                "Problemas na bateria",
+                "Problemas de execu\u00e7\u00e3o de tarefas"
+            ],
+            "resposta": 1,
+            "respondida": 0
+        },
+        {
+            "questao": 25,
+            "pergunta": "A tradu\u00e7\u00e3o correta para a express\u00e3o \"messed up\" \u00e9",
+            "alternativas": [
+                "Fracassado",
+                "Erguido",
+                "Elevado",
+                "Processado"
+            ],
+            "resposta": 0,
+            "respondida": 0
+        },
+        {
+            "questao": 26,
+            "pergunta": "Dentre as alternativas abaixo, um n\u00e3o \u00e9 considerado verbo de defini\u00e7\u00e3o. Marque-o.",
+            "alternativas": [
+                "To be",
+                "To define",
+                "To mean",
+                "To know"
+            ],
+            "resposta": 3,
+            "respondida": 0
+        },
+        {
+            "questao": 27,
+            "pergunta": "Sobre o texto \"What is a Computer?\", marque a sequ\u00eancia correta quanto \u00e0 rela\u00e7\u00e3o entre as palavras e as express\u00f5es\n1- hardware\n2- software\n\n( ) is information in the form of data and programs\n( ) eletronic and mechanical parts the make up a computer system",
+            "alternativas": [
+                "1 - 1",
+                "1 - 2",
+                "2 - 1",
+                "2 - 2"
+            ],
+            "resposta": 2,
+            "respondida": 0
+        },
+        {
+            "questao": 28,
+            "pergunta": "Google Glass is a wearable computer with an optical head-mounted display. It was developed by Google with the mission of producing a mass-market ubiquitous computer.\nO it se refere a:",
+            "alternativas": [
+                "Google Glass",
+                "Computer",
+                "Google",
+                "Developed"
+            ],
+            "resposta": 0,
+            "respondida": 0
+        },
+        {
+            "questao": 29,
+            "pergunta": "Estartar, lincar, butar, printar, becapear...Que nome damos a essa ideia de adaptar uma palavra inglesa para ser usada no portugu\u00eas?",
+            "alternativas": [
+                "Nativar",
+                "Aportuguesar",
+                "Estrangeirismo",
+                "Traduzir"
+            ],
+            "resposta": 1,
+            "respondida": 0
+        },
+        {
+            "questao": 30,
+            "pergunta": "Na seguinte frase: \"Like human beings, languages are born, evolve, transform themselves, and then die.\", \"Like\" significa:",
+            "alternativas": [
+                "Gostar",
+                "Curtir",
+                "Como",
+                "Assim"
+            ],
+            "resposta": 2,
+            "respondida": 1
+        },
+        {
+            "questao": 31,
+            "pergunta": "O significado da palavra yet \u00e9: ainda.",
+            "alternativas": [
+                "Verdadeiro",
+                "Falso"
+            ],
+            "resposta": 0,
+            "respondida": 1
+        },
+        {
+            "questao": 32,
+            "pergunta": "Qual a fun\u00e7\u00e3o da part\u00edcula \"will\"?\nex.: I will drop by to see her...",
+            "alternativas": [
+                "Indicar o tempo verbal do passado",
+                "Indicar uma afirma\u00e7\u00e3o",
+                "Indicar uma a\u00e7\u00e3o",
+                "Indicar o tempo verbal do futuro"
+            ],
+            "resposta": 3,
+            "respondida": 0
+        },
+        {
+            "questao": 33,
+            "pergunta": "O verbo \"worked\", \u00e9:",
+            "alternativas": [
+                "Regular",
+                "Irregular"
+            ],
+            "resposta": 0,
+            "respondida": 0
+        },
+        {
+            "questao": 34,
+            "pergunta": "O verbo \"have\" (ter), no passado simples, \u00e9 escrito \"haved\"",
+            "alternativas": [
+                "Verdadeiro",
+                "Falso"
+            ],
+            "resposta": 1,
+            "respondida": 0
+        },
+        {
+            "questao": 35,
+            "pergunta": "Quanto a verbos regulares, marque a alternativa correta:\n1- Had (teve)\n2- Talked (falou)\n3- Said (disse)\n4- Liked (gostou)",
+            "alternativas": [
+                "V - V - F - F",
+                "F - V - V - F",
+                "V - V - F - V",
+                "F - V - F - V"
+            ],
+            "resposta": 3,
+            "respondida": 0
+        },
+        {
+            "questao": 36,
+            "pergunta": "O verbo \"done\" (feito) \u00e9 regular:",
+            "alternativas": [
+                "Verdadeiro",
+                "Falso"
+            ],
+            "resposta": 1,
+            "respondida": 0
+        },
+        {
+            "questao": 37,
+            "pergunta": "O verbo \"broken\" (partido) \u00e9 irregular:",
+            "alternativas": [
+                "Verdadeiro",
+                "Falso"
+            ],
+            "resposta": 0,
+            "respondida": 0
+        },
+        {
+            "questao": 38,
+            "pergunta": "Qual das alternativas abaixo n\u00e3o possui um verbo regular?",
+            "alternativas": [
+                "Given, jumped, known, done",
+                "Talked, danced, liked, started",
+                "Had, gone, got, said",
+                "Added, broken, saved, loved"
+            ],
+            "resposta": 2,
+            "respondida": 0
+        },
+        {
+            "questao": 39,
+            "pergunta": "Na frase \"Brazil needs to create adequate conditions to encourage...\", \u00e9 poss\u00edvel localizar um grupo nominal. Que est\u00e1 definido na alternativa:",
+            "alternativas": [
+                "\"Brazil needs\"",
+                "\"adequate conditions\"",
+                "\"conditions to encourage\"",
+                "\"to create adequate\""
+            ],
+            "resposta": 1,
+            "respondida": 0
+        },
+        {
+            "questao": 40,
+            "pergunta": "O significado da palavra \"improve\" \u00e9:",
+            "alternativas": [
+                "Melhorar",
+                "Improv\u00e1vel",
+                "Prova",
+                "Imprevis\u00edvel"
+            ],
+            "resposta": 0,
+            "respondida": 0
+        },
+        {
+            "questao": 41,
+            "pergunta": "O significado da palavra \"increase\" \u00e9:",
+            "alternativas": [
+                "Incr\u00edvel",
+                "Em crise",
+                "Aumentar",
+                "Levantar"
+            ],
+            "resposta": 2,
+            "respondida": 0
+        },
+        {
+            "questao": 42,
+            "pergunta": "Sobre o texto \"Conhecendo o computador\" trabalhado em sala, o conceito \"programs\" se encaixa em qual alternativa:",
+            "alternativas": [
+                "Software",
+                "Hardware",
+                "Screen",
+                "Computer"
+            ],
+            "resposta": 0,
+            "respondida": 0
+        },
+        {
+            "questao": 43,
+            "pergunta": "Sobre o texto \"Conhecendo o computador\" trabalhado em sala, o conceito \"machine that process data\" se encaixa em qual alternativa:",
+            "alternativas": [
+                "Hardware",
+                "Software",
+                "Input",
+                "Computer"
+            ],
+            "resposta": 3,
+            "respondida": 0
+        },
+        {
+            "questao": 44,
+            "pergunta": "Sobre o texto \"Conhecendo o computador\" trabalhado em sala, o conceito \"device that show the results of the processing\" se encaixa em qual alternativa:",
+            "alternativas": [
+                "Output",
+                "Input",
+                "Screen",
+                "Computer"
+            ],
+            "resposta": 2,
+            "respondida": 0
+        },
+        {
+            "questao": 45,
+            "pergunta": "Sobre o texto \"Conhecendo o computador\" trabalhado em sala, o conceito \"series of actions that a computer performs to arrive at a result\" se encaixa em qual alternativa:",
+            "alternativas": [
+                "Processing",
+                "Data",
+                "Input",
+                "Screen"
+            ],
+            "resposta": 0,
+            "respondida": 0
+        },
+        {
+            "questao": 46,
+            "pergunta": "Selecione a alternativa correta referente a tradu\u00e7\u00e3o da express\u00e3o \"as opposed to\":",
+            "alternativas": [
+                "Semelhante \u00e0",
+                "Ao contr\u00e1rio de",
+                "Referente \u00e0",
+                "A favor de"
+            ],
+            "resposta": 1,
+            "respondida": 0
+        },
+        {
+            "questao": 47,
+            "pergunta": "Selecione a alternativa correta referente a tradu\u00e7\u00e3o da express\u00e3o \"but also so\":",
+            "alternativas": [
+                "Mas talvez",
+                "Por\u00e9m",
+                "Mas tamb\u00e9m",
+                "Mas quem sabe"
+            ],
+            "resposta": 2,
+            "respondida": 0
+        },
+        {
+            "questao": 48,
+            "pergunta": "\"The innovation Law is expected to provide the legal framework needed to improve the country's capacity to generate and commercialize technology.\"\nNa frase acima, a parte sublinhada representa:",
+            "alternativas": [
+                "Grupo nominal",
+                "Verbo irregular",
+                "Verbo regular",
+                "T\u00f3pico Frasal"
+            ],
+            "resposta": 3,
+            "respondida": 0
+        },
+        {
+            "questao": 49,
+            "pergunta": "Diante um texto, o leitor se dedica a identificar fatores importantes como n\u00fameros, datas, ou nome de uma pessoa. Pode se dizer que o leitor usou a t\u00e9cnica de skimming.\nA afirmativa acima \u00e9:",
+            "alternativas": [
+                "Verdadeiro",
+                "Falso"
+            ],
+            "resposta": 1,
+            "respondida": 0
+        }
+    ]
+}
