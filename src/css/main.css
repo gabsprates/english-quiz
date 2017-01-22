@@ -21,7 +21,7 @@ body, html {
   height: 110px;
   overflow: hidden;
   font-size: 25px;
-  border-radius: 19941101px;
+  border-radius: 100%;
   flex-wrap: wrap;
   margin: 20px;
   transition: 0.2s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
