@@ -2,36 +2,102 @@ import React, { Component } from 'react'
 import QuizNotifications from './QuizNotifications'
 import QuizQuestion from './Modal/QuizQuestion'
 import ButtonsList from './Buttons/ButtonsList'
-
-const questions = [
-  { "answered": true },
-  { "answered": false },
-  { "answered": true },
-  { "answered": true },
-  { "answered": false }
-]
+import Requests from '../Services/Requests'
 
 export default class QuizBox extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      questionsButtons: [],
+      quizNotification: {
+        message: '',
+        show: false,
+        type: 'is-off'
+      },
+      isQuestionActive: false,
+      questionModal: {}
+    };
+
+    this.setQuestionsButtons  = this.setQuestionsButtons.bind(this);
+    this.setQuizNotification  = this.setQuizNotification.bind(this);
+    this.handleQuestionButton = this.handleQuestionButton.bind(this);
+    this.changeModalStatus    = this.changeModalStatus.bind(this);
+    this.submitAnswer         = this.submitAnswer.bind(this);
+    this.setQuestion          = this.setQuestion.bind(this);
+  }
+
+  componentDidMount() {
+    Requests.getQuestions(['answered'])
+      .then((res) => {
+        this.setQuestionsButtons(res.data);
+      })
+      .catch((res) => {
+        this.setQuizNotification(res.toString(), 'danger');
+      });
+  }
+
+  setQuestionsButtons(data) {
+    this.setState({ questionsButtons: data });
+  }
+
+  setQuizNotification(notification, type) {
+    this.setState({
+      quizNotification: {
+        message: notification,
+        type: type,
+        show: true
+      }
+    });
+  }
+
+  handleQuestionButton(question) {
+    Requests.getQuestionById(question.id)
+      .then((res) => {
+        res.data["number"] = question.number;
+        this.setQuestion(res.data);
+        this.changeModalStatus(true);
+      })
+      .catch((res) => {
+        this.setQuizNotification(res.toString(), 'danger');
+      });
+  }
+
+  setQuestion(question) {
+    this.setState({ questionModal: question });
+  }
+
+  submitAnswer(e) {
+    e.preventDefault();
+    // TODO: submit form and update button state
+  }
+
+  changeModalStatus(status = false) {
+    if (!!!status) {
+      this.setState({ questionModal: {} });
+    }
+    this.setState({ isQuestionActive: !!status });
+  }
 
   render() {
     return (
       <div>
         <h1 className="title h1 has-text-centered">English Quiz</h1>
-        <QuizNotifications type="danger" />
-        <ButtonsList questions={questions} />
-        <QuizQuestion question={
-          {
-              "question": "Check an alternative that corresponds to a correct sequence between characters and their respective companies.\n1- Steve Jobs\n2- Steve Wozniak\n3- Marc Randolph\n4- Babak Parviz",
-              "options": [
-                  "Apple, Google Glass, Pixar, Netflix",
-                  "Google Glass, Pixar, Netflix, Apple",
-                  "Pixar, Netflix, Google Glass, Apple",
-                  "Pixar, Apple, Netflix, Google Glass"
-              ],
-              "answer": 3,
-              "answered": false
-          }
-        } isActive={true ? 'is-active' : ''} />
+        { this.state.quizNotification.show &&
+          <QuizNotifications
+            notification={ this.state.quizNotification.message }
+            type={ this.state.quizNotification.type }
+            />
+        }
+        <ButtonsList questions={ this.state.questionsButtons } handle={ this.handleQuestionButton } />
+
+        { this.state.isQuestionActive &&
+          <QuizQuestion
+            question={ this.state.questionModal }
+            closeModal={ this.changeModalStatus }
+            submitAnswer={ this.submitAnswer }
+            />
+        }
       </div>
     )
   }

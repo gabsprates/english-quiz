@@ -6,9 +6,9 @@ export default class Alternative extends Component {
       <div className="alternatives">
         <div className="control alternative">
           <label className="label">
-            <input type="radio" name="answer" value={this.props.index} />
+            <input type="radio" name="answer" value={ this.props.index } />
             <span className="fa"></span>
-            {this.props.text}
+            { this.props.text }
           </label>
         </div>
       </div>
