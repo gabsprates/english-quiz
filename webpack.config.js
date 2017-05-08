@@ -1,23 +1,28 @@
-var LiveReloadPlugin = require('webpack-livereload-plugin');
-
 module.exports = {
-  entry: "./app/Quiz.js",
+
+  entry: './src/js/app.js',
   output: {
-    filename: "assets/js/Quiz.js"
+    path: './dist/js',
+    filename: 'app.js',
+    publicPath: '/dist/js'
   },
+
   module: {
     loaders: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-          presets: ['react']
-        }
+        loader: 'babel-loader'
+      },
+      {
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass"]
       }
     ]
   },
-  plugins: [
-    new LiveReloadPlugin()
-  ]
-}
+
+  devServer: {
+    inline: true
+  }
+
+};
