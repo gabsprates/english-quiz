@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import QuizNotifications from './QuizNotifications'
 import QuizQuestion from './Modal/QuizQuestion'
 import ButtonsList from './Buttons/ButtonsList'
+import Settings from './Settings'
 import Requests from '../Services/Requests'
 
 export default class QuizBox extends Component {
@@ -19,21 +20,27 @@ export default class QuizBox extends Component {
       questionModal: {}
     };
 
+    this.getQuestionsButtons  = this.getQuestionsButtons.bind(this);
     this.setQuestionsButtons  = this.setQuestionsButtons.bind(this);
     this.setQuizNotification  = this.setQuizNotification.bind(this);
     this.handleQuestionButton = this.handleQuestionButton.bind(this);
+    this.updateButtonState    = this.updateButtonState.bind(this);
     this.changeModalStatus    = this.changeModalStatus.bind(this);
     this.submitAnswer         = this.submitAnswer.bind(this);
     this.setQuestion          = this.setQuestion.bind(this);
   }
 
   componentDidMount() {
+    this.getQuestionsButtons();
+  }
+
+  getQuestionsButtons() {
     Requests.getQuestions(['answered'])
       .then((res) => {
         this.setQuestionsButtons(res.data);
       })
       .catch((res) => {
-        this.setQuizNotification(res.toString(), 'danger');
+        this.setQuizNotification(res.toString());
       });
   }
 
@@ -41,12 +48,12 @@ export default class QuizBox extends Component {
     this.setState({ questionsButtons: data });
   }
 
-  setQuizNotification(notification, type) {
+  setQuizNotification(notification, type = 'danger', show = true) {
     this.setState({
       quizNotification: {
         message: notification,
         type: type,
-        show: true
+        show: show
       }
     });
   }
@@ -55,11 +62,12 @@ export default class QuizBox extends Component {
     Requests.getQuestionById(question.id)
       .then((res) => {
         res.data["number"] = question.number;
+        res.data["isAnswering"] = false;
         this.setQuestion(res.data);
         this.changeModalStatus(true);
       })
       .catch((res) => {
-        this.setQuizNotification(res.toString(), 'danger');
+        this.setQuizNotification(res.toString());
       });
   }
 
@@ -67,9 +75,55 @@ export default class QuizBox extends Component {
     this.setState({ questionModal: question });
   }
 
-  submitAnswer(e) {
+  updateButtonState(question, status = true) {
+    let button = this.state.questionsButtons.findIndex(obj => {
+      return obj._id == question;
+    });
+
+    this.setState((prevState) => {
+      questionsButtons: {
+        $set: prevState.questionsButtons[button].answered = status
+      }
+    });
+  }
+
+  submitAnswer(e, question) {
     e.preventDefault();
-    // TODO: submit form and update button state
+    try {
+      let answer = e.target.answer.value || NaN;
+
+      if (isNaN(answer)) {
+        throw {
+          message: "You must to respond the questions...",
+          type: 'warning'
+        };
+      } else if (!question) {
+        throw new Error("Submission error.");
+      }
+
+      if (answer == question.answer) {
+        question.answered = true;
+        question.isAnswering = { correct: true };
+      } else {
+        question.answered = true;
+        question.isAnswering = { correct: false };
+      }
+
+      this.setQuestion(question);
+      this.updateButtonState(question._id);
+
+      Requests.setAnswered(question._id)
+        .catch((res) => {
+          this.setQuizNotification(`${res.toString()} :: Fail to update database`);
+        });
+
+      this.changeModalStatus(true);
+
+    } catch (e) {
+      this.changeModalStatus(false);
+      this.setQuizNotification(e.message, (e.type ? e.type : 'danger'));
+      return;
+    }
   }
 
   changeModalStatus(status = false) {
@@ -86,6 +140,7 @@ export default class QuizBox extends Component {
         { this.state.quizNotification.show &&
           <QuizNotifications
             notification={ this.state.quizNotification.message }
+            close={ () => { this.setQuizNotification('', '', false); } }
             type={ this.state.quizNotification.type }
             />
         }
@@ -98,6 +153,10 @@ export default class QuizBox extends Component {
             submitAnswer={ this.submitAnswer }
             />
         }
+
+        <hr />
+
+        <Settings updateButton={ this.updateButtonState } />
       </div>
     )
   }

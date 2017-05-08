@@ -3,8 +3,10 @@ import Alternative from './Alternative'
 
 export default class QuestionContent extends Component {
   render() {
-    const alternatives = this.props.question.options.map((text, index) => {
+    const thisQuestion = this.props.question;
+    const alternatives = thisQuestion.options.map((text, index) => {
       return <Alternative
+        isChecked={ thisQuestion.answered && (thisQuestion.answer == index) }
         index={ index }
         text={ text }
         key={ index + text } />
@@ -12,7 +14,7 @@ export default class QuestionContent extends Component {
     return (
       <section className="modal-card-body">
         <div className="description">
-          { this.props.question.question }
+          { thisQuestion.question }
         </div>
 
         { alternatives }

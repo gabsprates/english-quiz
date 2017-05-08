@@ -1,5 +1,11 @@
 @import "./effects";
 
+.settings {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
 .buttons-list {
   flex-wrap: wrap;
   justify-content: center;
@@ -56,4 +62,12 @@
   font-size: 20px;
   white-space: pre-wrap;
   margin-bottom: 10px;
+}
+
+
+// Action Buttons
+.action-buttons {
+  .fa {
+    font-size: 21px;
+  }
 }
