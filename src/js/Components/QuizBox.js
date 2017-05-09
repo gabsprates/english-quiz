@@ -76,15 +76,14 @@ export default class QuizBox extends Component {
   }
 
   updateButtonState(question, status = true) {
-    let button = this.state.questionsButtons.findIndex(obj => {
-      return obj._id == question;
+    let buttons = this.state.questionsButtons.map(obj => {
+      if (obj._id == question) {
+        obj.answered = status;
+      }
+      return obj;
     });
 
-    this.setState((prevState) => {
-      questionsButtons: {
-        $set: prevState.questionsButtons[button].answered = status
-      }
-    });
+    this.setState({ questionsButtons: buttons });
   }
 
   submitAnswer(e, question) {
